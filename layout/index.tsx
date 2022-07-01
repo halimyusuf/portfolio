@@ -1,10 +1,7 @@
 import Navbar from "./navbar";
-import type { AppProps } from "next/app";
 import { Box } from "@chakra-ui/react";
 
-export default function Layout({
-  children,
-}: AppProps & { children?: JSX.Element }) {
+export default function Layout({ children }: { children?: JSX.Element }) {
   return (
     <Box backgroundColor="#111111" color="#F9FAFB">
       <div>
