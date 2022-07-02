@@ -7,11 +7,11 @@ export default function SocialIcons() {
     borderRadius: "50%",
     justifyContent: "center",
     align: "center",
-    margin: "10px 0",
+    margin: "10px 7px",
   };
 
   return (
-    <Box>
+    <Box display={{ base: "flex", lg: "block" }}>
       <Flex {...iconStyle}>
         <Icon viewBox="0 0 128 128">
           <path

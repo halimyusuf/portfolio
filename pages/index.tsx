@@ -6,45 +6,51 @@ import { projects } from "../data";
 
 const Home: NextPage = () => {
   return (
-    <Box marginTop={{ base: "7", md: "12" }}>
+    <Box mt={{ base: "7", md: "12" }}>
       <Flex align="center" justify="space-between">
         <Box>
           <Box
             fontSize={{ base: "18", md: "24" }}
             color="rgba(250, 251, 255, 0.65);"
-            marginBottom="2"
+            mb="2"
           >
             Hi 👋🏼, I&apos;m Halim Yusuf
           </Box>
           <Box
             fontSize={{ base: "18", md: "30" }}
             maxW="800px"
-            textAlign={"justify"}
+            textAlign={"justif"}
           >
             I implement user interface design and solve user problems using web
             technologies. I have 3 years of making products that solve user
             problems and implementing responsive website.
           </Box>
         </Box>
-        <Box marginLeft="5">
+        <Box ml="5" display={{ base: "none", lg: "block" }}>
           <SocialIcons />
         </Box>
       </Flex>
 
-      <Box marginTop="7">
-        <Button
-          color="#FAFBFF"
-          backgroundColor="#292929"
-          colorScheme="lightgrey"
-          _hover={{ backgroundColor: "#292929" }}
-        >
-          Hire Me
-        </Button>
+      <Box display="flex" justifyContent="space-between" alignItems={"end"}>
+        <Box mt="7">
+          <Button
+            color="#FAFBFF"
+            bg="#292929"
+            colorScheme="lightgrey"
+            _hover={{ bg: "#292929" }}
+          >
+            Hire Me
+          </Button>
+        </Box>
+
+        <Box display={{ base: "block", lg: "none" }}>
+          <SocialIcons />
+        </Box>
       </Box>
 
       {/* projects */}
       <Box marginTop="10">
-        <Box borderBottom="1px solid #FAFBFF" paddingBottom={"2"}>
+        <Box borderBottom="1px solid #FAFBFF" pb={"2"}>
           <Text fontSize={"24"}>Projects</Text>
         </Box>
 
@@ -52,7 +58,7 @@ const Home: NextPage = () => {
           {projects.map((project, i) => (
             <Box
               key={project.name}
-              paddingBottom="5"
+              pb="5"
               borderTop={i !== 0 ? "0.5px solid rgba(250, 251, 255, 0.65)" : ""}
             >
               <Project {...project} />

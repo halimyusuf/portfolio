@@ -19,9 +19,9 @@ export default function Project(props: project) {
         flexWrap={"wrap-reverse"}
         align="end"
       >
-        <Box width="500px" paddingBottom="2">
-          <Box paddingTop="5">{props.date}</Box>
-          <Box marginTop={{ base: "3", md: "7" }}>
+        <Box width="500px" pb="2">
+          <Box pt="5">{props.date}</Box>
+          <Box mt={{ base: "3", md: "7" }}>
             <Text fontSize={24}>{props.name}</Text>
           </Box>
           <Box marginTop="3" color="rgba(250, 251, 255, 0.65);">
@@ -47,7 +47,7 @@ export default function Project(props: project) {
             </Flex>
           </Box>
 
-          <Box marginTop="5">
+          <Box mt="5">
             <Stack direction="row" spacing={2} align="center">
               {props.stacks.map((stack) => (
                 <Tag key={stack} color="#fff" background="#181818">
@@ -64,7 +64,7 @@ export default function Project(props: project) {
             ratio={4 / 3}
           > */}
 
-          <Box>
+          <Box pt={8}>
             <Image
               style={{ borderRadius: "5px" }}
               width={"400"}
