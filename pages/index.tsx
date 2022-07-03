@@ -16,11 +16,7 @@ const Home: NextPage = () => {
           >
             Hi 👋🏼, I&apos;m Halim Yusuf
           </Box>
-          <Box
-            fontSize={{ base: "18", md: "23" }}
-            maxW="800px"
-            textAlign={"justif"}
-          >
+          <Box fontSize={{ base: "18", md: "23" }} maxW="800px">
             I implement user interface design and solve user problems using web
             technologies. I have 3 years of making products that solve user
             problems and implementing responsive website.
