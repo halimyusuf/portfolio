@@ -19,15 +19,15 @@ export default function Project(props: project) {
         flexWrap={"wrap-reverse"}
         align="end"
       >
-        <Box width="500px" pb="2">
+        <Box width="500px" maxW="100%" pb="2">
           <Box pt="5">{props.date}</Box>
           <Box mt={{ base: "3", md: "7" }}>
-            <Text fontSize={24}>{props.name}</Text>
+            <Text fontSize={{ base: 16, md: 20 }}>{props.name}</Text>
           </Box>
-          <Box marginTop="3" color="rgba(250, 251, 255, 0.65);">
+          <Box mt={{ base: 1, md: "3" }} color="rgba(250, 251, 255, 0.65);">
             <Text fontSize={16}>{props.description}</Text>
           </Box>
-          <Box marginTop="5">
+          <Box mt={{ base: 2, md: "5" }}>
             <Flex align="center">
               <Box marginX="3">
                 <Icon viewBox="0 0 24 24">
@@ -39,10 +39,18 @@ export default function Project(props: project) {
                   />
                 </Icon>
               </Box>
-              <Box>
-                <Button colorScheme="white" variant="link">
-                  <Text fontSize={12}> {props.url}</Text>
-                </Button>
+              <Box
+                textOverflow="ellipsis"
+                overflow="hidden"
+                whiteSpace={"nowrap"}
+              >
+                <a href={props.url} target="_blank" rel="noreferrer">
+                  <Button colorScheme="white" variant="link">
+                    <Text fontSize={12} pr="2">
+                      {props.url}
+                    </Text>
+                  </Button>
+                </a>
               </Box>
             </Flex>
           </Box>
@@ -62,16 +70,26 @@ export default function Project(props: project) {
           {/* <AspectRatio
             style={{ width: "400px", maxWidth: "80%" }}
             ratio={4 / 3}
+            overflow="hidden"
           > */}
-
           <Box pt={8}>
-            <Image
-              style={{ borderRadius: "5px" }}
-              width={"400"}
-              height="240"
-              src={props.cover}
-              alt="Cover"
-            />
+            <a
+              href={props.url}
+              style={{
+                border: "1px solid gba(250, 251, 255, 0.65)",
+              }}
+            >
+              <Image
+                width={"600"}
+                height="300"
+                src={props.cover}
+                objectFit="cover"
+                alt="Image"
+                style={{
+                  borderRadius: "5px",
+                }}
+              />
+            </a>
           </Box>
           {/* </AspectRatio> */}
         </Box>
