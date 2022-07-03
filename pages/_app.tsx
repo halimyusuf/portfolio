@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Layout>
-        <Box padding={{ base: "0.5rem 2rem", md: "1rem 3rem" }}>
+        <Box padding={{ base: "0.5rem 1rem", md: "1rem 3rem" }}>
           <Component {...pageProps} />
         </Box>
       </Layout>

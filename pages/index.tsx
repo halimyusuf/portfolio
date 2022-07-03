@@ -6,18 +6,18 @@ import { projects } from "../data";
 
 const Home: NextPage = () => {
   return (
-    <Box mt={{ base: "7", md: "12" }}>
+    <Box mt={{ base: "7", md: "12" }} maxW="100%">
       <Flex align="center" justify="space-between">
         <Box>
           <Box
-            fontSize={{ base: "18", md: "24" }}
+            fontSize={{ base: "14", md: "20" }}
             color="rgba(250, 251, 255, 0.65);"
             mb="2"
           >
             Hi 👋🏼, I&apos;m Halim Yusuf
           </Box>
           <Box
-            fontSize={{ base: "18", md: "30" }}
+            fontSize={{ base: "18", md: "23" }}
             maxW="800px"
             textAlign={"justif"}
           >
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       {/* projects */}
       <Box marginTop="10">
         <Box borderBottom="1px solid #FAFBFF" pb={"2"}>
-          <Text fontSize={"24"}>Projects</Text>
+          <Text fontSize={{ base: 22, md: "24" }}>Projects</Text>
         </Box>
 
         <Box marginTop="5">
